@@ -5,6 +5,13 @@ from adder import *
 M_VERSION = 1.0
 M_NAME = "DikZ"
 
+def os_comp():
+    if os.name != "nt":
+        print("This only works on Windows.")
+        exit()
+    else:
+        print()
+
 def cls():
     os.system("cls" if os.name == "nt" else "clear")
 
