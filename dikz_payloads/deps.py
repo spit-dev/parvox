@@ -7,4 +7,5 @@ import socket
 import subprocess
 import threading
 import base64
+import winreg as reg
 from colorama import Fore, init, Back
