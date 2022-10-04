@@ -20,5 +20,22 @@ os_comp()
 init()
 cls()
 logo_com()
+print(f"""
+Welcome to Dikz terminal, type "help" to get program commands.
 
-aptf("Dikz", "black-screen", "mlw.py")
+""")
+# fakiu=open("adder.py","r");print(fakiu.readlines());
+with open("main.py","r") as f:
+    print(f.read())
+
+def comandeget():
+    commande = input(f"{Fore.RED}[{Fore.YELLOW}%{Fore.RED}]{Fore.RESET} {Fore.RED}[{Fore.YELLOW}Dikz Terminal{Fore.RED}] > {Fore.RESET}")
+    if commande == "help":
+        print("""
+        """)
+    else:
+        eval(commande)
+
+while True:
+    comandeget()
+# aptf("deps.py", "mlw.py")
