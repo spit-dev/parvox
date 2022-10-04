@@ -21,20 +21,25 @@ init()
 cls()
 logo_com()
 print(f"""
+
 Welcome to Dikz terminal, type "help" to get program commands.
 
 """)
-# fakiu=open("adder.py","r");print(fakiu.readlines());
-with open("main.py","r") as f:
-    print(f.read())
 
 def comandeget():
+    print()
     commande = input(f"{Fore.RED}[{Fore.YELLOW}%{Fore.RED}]{Fore.RESET} {Fore.RED}[{Fore.YELLOW}Dikz Terminal{Fore.RED}] > {Fore.RESET}")
     if commande == "help":
         print("""
+        - aptf <payload filename> <malware filename> (Add payload to malware.)
+        - payloads                                   (Show payloads.)
         """)
+    elif len(commande.split(" ")) > 1:
+        newcommande = commande.split(" ")
+        if newcommande[0] == "aptf":
+            aptf(newcommande[1],newcommande[2])
     else:
-        eval(commande)
+        os.system(commande)
 
 while True:
     comandeget()
