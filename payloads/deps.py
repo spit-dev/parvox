@@ -15,3 +15,6 @@ import winshell
 import win32com.client
 import win32api, win32con
 
+"""
+This file is optional. Only check dependencies.
+"""
