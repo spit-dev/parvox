@@ -1,2 +1,2 @@
-# DikZ
- Python Malware
+# Parvox
+ Python malware builder.
