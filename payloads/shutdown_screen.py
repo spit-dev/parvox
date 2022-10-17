@@ -12,3 +12,4 @@ def move_cursor():
 
 move_cursor()
 screen_off()
+

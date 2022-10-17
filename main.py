@@ -33,8 +33,10 @@ def comandeget():
         if commande == "help":
             print("""
     - aptf <payload filename> <malware filename> (Add payload to malware.)
-    - payloads                                   (Show payloads.)
     - build <malware name> [icon name]           (Converts a malware to .exe)
+    - payloads                                   (Show payloads.)
+    - malwares                                   (Show malwares in 'output' folder.)
+    
             """)
         elif len(commande.split(" ")) > 1:
             newcommande = commande.split(" ")
@@ -52,15 +54,24 @@ def comandeget():
                 if i2[-3:] != ".py":
                     continue
                 print(f"{Fore.YELLOW}-{Fore.RESET} {i2}")
+        elif commande == "malwares":
+            mals = glob.glob("./output/*")
+            if len(mals) == 0:
+                return
+            for i in mals:
+                i2 = i.split("./output\\")[1]
+                if i2[-3:] != ".py":
+                    continue
+                print(f"{Fore.YELLOW}-{Fore.RESET} {i2}")
         elif commande == "exit":
             exit()
         else:
             os.system(commande)
     except:
-        print("Exception: Needs to exit!")
-        print(f"Error code: {sys.exc_info()[0]}")
+        cls()
+        print(f"{Fore.RED}Exception: {Fore.RESET}Needs to exit!")
+        print(f"{Fore.RED}Error code: {Fore.RESET}{sys.exc_info()[0]}")
         exit()
 
 while True:
     comandeget()
-# aptf("deps.py", "mlw.py")

